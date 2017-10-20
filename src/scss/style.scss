@@ -1,1 +1,59 @@
-// Main Sass File
+@import 'base/_media-queries.scss';
+@import "base/_global.scss";
+@import 'base/_variables.scss';
+
+
+.KV-bg {
+  background: url("../img/bg_1920x900.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 700px;
+  position: relative;
+  @include max-screen(600px) {
+    min-height: 350px;
+  }
+  .car {
+    background: url("../img/car_1920x900.png") no-repeat center center;
+    -webkit-background-size:contain;
+    background-size: contain;
+    width: 100%;
+    min-height: 700px;
+    z-index: 100;
+    position: absolute;
+    @include max-screen(600px) {
+      min-height: 350px;
+    }
+  }
+  .dark-overlay {
+    background-color: $dark-overlay;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    min-height: 700px;
+    @include max-screen(600px) {
+      min-height: 350px;
+    }
+    .home-inner {
+      width:100%;
+      min-height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include max-screen(600px) {
+        min-height: 350px;
+      }
+
+      .KV {
+        text-align: center;
+        z-index:101;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.action {
+  background-color: $actionBg;
+  color: $mainWhite;
+}
+

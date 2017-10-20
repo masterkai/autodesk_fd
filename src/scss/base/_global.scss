@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import "_variables.scss";
+
+body {
+  background-color: $mainWhite;
+  color: #050500;
+  font-family: 'Noto Sans TC', 'Microsoft YaHei', 'LiHei Pro', 'Noto Sans TC', sans-serif ;
+}
+
+.responsive-img {
+  width: 100%;
+}

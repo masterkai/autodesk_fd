@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+  background-color: #fff;
+  color: #050500;
+  font-family: 'Noto Sans TC', 'Microsoft YaHei', 'LiHei Pro', 'Noto Sans TC', sans-serif; }
+
+.responsive-img {
+  width: 100%; }
+
+.KV-bg {
+  background: url("../img/bg_1920x900.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 700px;
+  position: relative; }
+  @media only screen and (max-width: 600px) {
+    .KV-bg {
+      min-height: 350px; } }
+  .KV-bg .car {
+    background: url("../img/car_1920x900.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    min-height: 700px;
+    z-index: 100;
+    position: absolute; }
+    @media only screen and (max-width: 600px) {
+      .KV-bg .car {
+        min-height: 350px; } }
+  .KV-bg .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px; }
+    @media only screen and (max-width: 600px) {
+      .KV-bg .dark-overlay {
+        min-height: 350px; } }
+    .KV-bg .dark-overlay .home-inner {
+      width: 100%;
+      min-height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (max-width: 600px) {
+        .KV-bg .dark-overlay .home-inner {
+          min-height: 350px; } }
+      .KV-bg .dark-overlay .home-inner .KV {
+        text-align: center;
+        z-index: 101;
+        cursor: pointer; }
+
+.action {
+  background-color: #8b8b8b;
+  color: #fff; }
