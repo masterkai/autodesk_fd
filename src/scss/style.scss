@@ -45,7 +45,7 @@
 
       .KV {
         text-align: center;
-        z-index:101;
+        z-index:100;
         cursor: pointer;
       }
     }
@@ -53,7 +53,130 @@
 }
 
 .action {
+  background-image: url("../img/form-bg.png");
+  background-attachment: fixed;
   background-color: $actionBg;
   color: $mainWhite;
 }
 
+.title {
+  font-weight: 500;
+  font-size: 2.58rem;
+  @include max-screen(600px) {
+    font-size: 1.58rem;
+    line-height: 2.2rem;
+  }
+}
+
+.checkbox {
+  font-size: 13px;
+}
+.list-items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  .list-item {
+    flex: 1 1 33.33%;
+    width: 100%;
+    justify-content: center;
+    @include max-screen(600px){
+      flex: 1 1 100%;
+    }
+  }
+  .relative {
+    position: relative;
+  }
+}
+.list-items-center {
+  justify-content: center;
+}
+.list-item-body {
+  position: relative;
+  display: flex;
+
+
+  .float-tag {
+    position: absolute;
+    z-index: 2;
+    top: -5px;
+    right: -5px;
+
+  }
+  .icon-gift {
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+
+    @include max-screen(600px){
+      display: inline-block;
+      right: -4px;
+    }
+  }
+  .list-item-img {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+#GOTOP {
+  display: none;
+  width: 0px;
+  height: 40px;
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  background-color: #f34d59;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  z-index: 9999
+}
+
+#GOTOP:hover {
+  background-color: #fdd237
+}
+
+#GOTOP:hover i {
+  color: #f34d59
+}
+
+#GOTOP i {
+  display: block;
+  vertical-align: middle;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 6px;
+  opacity: 0.1
+}
+
+#GOTOP.active {
+  width: 40px
+}
+
+#GOTOP.active i {
+  opacity: 1
+}
+
+.iframe {
+  background-color: white;
+}
+
+#iframe_TOP iframe {
+  z-index: 900;
+  overflow: visible;
+  height: 280px;
+  width: 100%;
+  margin-bottom: -219px;
+  border: 0 none;
+  position: relative
+}
+
+@media (max-width: 1023px) {
+  #iframe_TOP iframe {
+    z-index: 0
+  }
+}
