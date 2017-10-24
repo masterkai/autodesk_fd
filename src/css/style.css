@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 body {
   background-color: #fff;
@@ -8,13 +9,14 @@ body {
   width: 100%; }
 
 .KV-bg {
-  background: url("../img/bg_1920x900.png") no-repeat center center fixed;
+  background: url("../img/bg_1920x900.gif") no-repeat center center fixed;
   background-size: cover;
   min-height: 700px;
   position: relative; }
   @media only screen and (max-width: 600px) {
     .KV-bg {
-      min-height: 350px; } }
+      min-height: 350px;
+      background: url("../img/bg_768x500.png") no-repeat center top fixed; } }
   .KV-bg .car {
     background: url("../img/car_1920x900.png") no-repeat center center;
     -webkit-background-size: contain;
@@ -35,7 +37,7 @@ body {
     min-height: 700px; }
     @media only screen and (max-width: 600px) {
       .KV-bg .dark-overlay {
-        min-height: 350px; } }
+        min-height: 100%; } }
     .KV-bg .dark-overlay .home-inner {
       width: 100%;
       min-height: 700px;
@@ -49,6 +51,18 @@ body {
         text-align: center;
         z-index: 100;
         cursor: pointer; }
+        .KV-bg .dark-overlay .home-inner .KV-body {
+          position: relative;
+          display: flex;
+          flex-direction: column; }
+          .KV-bg .dark-overlay .home-inner .KV-body .KV-main {
+            align-self: center;
+            transform: translateY(25%); }
+          .KV-bg .dark-overlay .home-inner .KV-body .freeDownload {
+            align-self: center; }
+            @media only screen and (max-width: 600px) {
+              .KV-bg .dark-overlay .home-inner .KV-body .freeDownload {
+                padding: 20px 40px; } }
 
 .action {
   background-image: url("../img/form-bg.png");
@@ -113,8 +127,8 @@ body {
   width: 0px;
   height: 40px;
   cursor: pointer;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   background-color: #f34d59;
   text-align: center;
   color: #fff;
@@ -156,3 +170,11 @@ body {
 @media (max-width: 1023px) {
   #iframe_TOP iframe {
     z-index: 0; } }
+
+/* 這是設定所有放大縮小的物件是使用移動方式變化 */
+.move {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }

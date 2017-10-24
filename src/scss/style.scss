@@ -4,12 +4,13 @@
 
 
 .KV-bg {
-  background: url("../img/bg_1920x900.png") no-repeat center center fixed;
+  background: url("../img/bg_1920x900.gif") no-repeat center center fixed;
   background-size: cover;
   min-height: 700px;
   position: relative;
   @include max-screen(600px) {
     min-height: 350px;
+    background: url("../img/bg_768x500.png") no-repeat center top fixed;
   }
   .car {
     background: url("../img/car_1920x900.png") no-repeat center center;
@@ -31,7 +32,7 @@
     width: 100%;
     min-height: 700px;
     @include max-screen(600px) {
-      min-height: 350px;
+      min-height: 100%;
     }
     .home-inner {
       width:100%;
@@ -47,6 +48,21 @@
         text-align: center;
         z-index:100;
         cursor: pointer;
+        &-body {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          .KV-main {
+            align-self: center;
+            transform: translateY(25%);
+          }
+          .freeDownload {
+            align-self: center;
+            @include max-screen(600px) {
+              padding:20px 40px;
+            }
+          }
+        }
       }
     }
   }
@@ -127,8 +143,8 @@
   width: 0px;
   height: 40px;
   cursor: pointer;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   background-color: #f34d59;
   text-align: center;
   color: #fff;
@@ -179,4 +195,13 @@
   #iframe_TOP iframe {
     z-index: 0
   }
+}
+
+/* 這是設定所有放大縮小的物件是使用移動方式變化 */
+.move {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
